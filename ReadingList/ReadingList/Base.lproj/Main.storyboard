@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r0G-DK-dxT">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="JFn-PX-nEI">
+            <objects>
+                <navigationController id="r0G-DK-dxT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="eu9-85-Us2">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZQw-mJ-Y3f" kind="relationship" relationship="rootViewController" id="IRH-Nw-RAc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKd-HM-nQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1625" y="-4"/>
+        </scene>
+        <!--My Reading List-->
+        <scene sceneID="IbS-1p-Iyk">
+            <objects>
+                <tableViewController id="ZQw-mJ-Y3f" customClass="ReadingListController" customModule="ReadingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qgb-XD-LWC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Book Summary" textLabel="Uh5-8v-aAb" detailTextLabel="QUX-aU-ulf" style="IBUITableViewCellStyleSubtitle" id="eVG-2T-3TH">
+                                <rect key="frame" x="0.0" y="28" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eVG-2T-3TH" id="xiJ-TT-5ZJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="55.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="A Midsummer Night's Dream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uh5-8v-aAb">
+                                            <rect key="frame" x="16" y="8.9999999999999982" width="219.33333333333334" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Shakespeare, William  2012" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QUX-aU-ulf">
+                                            <rect key="frame" x="16" y="31.333333333333332" width="155" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="JfM-wu-E9i" kind="show" identifier="View" id="BS5-Np-luf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="fn9-SD-Olm" id="eoi-hb-ySq"/>
+                            <outlet property="delegate" destination="ZQw-mJ-Y3f" id="VFm-6i-wKV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Reading List" id="SM1-oz-Pxt">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="I5a-1M-afN">
+                            <connections>
+                                <segue destination="auY-RV-iFU" kind="show" identifier="Add" id="wOQ-s1-iNY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dataSource" destination="fn9-SD-Olm" id="1VD-22-9li"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8Q-xv-xFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="fn9-SD-Olm" customClass="ReadingListDataSource" customModule="ReadingList" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-849" y="-3"/>
+        </scene>
+        <!--ViewAndEdit-->
+        <scene sceneID="Mzo-IW-ceC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ViewAndEdit" id="JfM-wu-E9i" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1D-X5-vJV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="-81"/>
+        </scene>
+        <!--Add-->
+        <scene sceneID="7WY-Mi-XJO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Add" id="auY-RV-iFU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bo-3J-Zfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-254" y="67"/>
+        </scene>
+    </scenes>
+</document>
