@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r0G-DK-dxT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r0G-DK-dxT">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,7 +80,16 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8Q-xv-xFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="fn9-SD-Olm" customClass="ReadingListDataSource" customModule="ReadingList" customModuleProvider="target"/>
+                <customObject id="fn9-SD-Olm" customClass="ReadingListDataSource" customModule="ReadingList" customModuleProvider="target">
+                    <connections>
+                        <outlet property="store" destination="NQV-ne-Pgr" id="3Uo-V5-bGQ"/>
+                    </connections>
+                </customObject>
+                <customObject id="NQV-ne-Pgr" customClass="ReadingListStore" customModule="ReadingListModel">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storeName" value="ReadingList"/>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-849" y="-3"/>
         </scene>

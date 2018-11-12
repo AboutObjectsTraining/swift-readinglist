@@ -1,7 +1,6 @@
-//
-// Copyright (C) 2017 About Objects, Inc. All Rights Reserved.
-// See LICENSE.txt for this example's licensing information.
-//
+// Copyright (C) 2018 About Objects, Inc. All Rights Reserved.
+// See LICENSE.txt for this project's licensing information.
+
 #import <UIKit/UIKit.h>
 
 //! Project version number for ReadingListModel.

@@ -1,4 +1,5 @@
 import UIKit
+import ReadingListModel
 
 class ReadingListController: UITableViewController
 {

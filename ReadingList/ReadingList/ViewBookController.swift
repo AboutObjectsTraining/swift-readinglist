@@ -1,4 +1,5 @@
 import UIKit
+import ReadingListModel
 
 class ViewBookController: UITableViewController
 {
@@ -32,6 +33,6 @@ extension UIStoryboardSegue
         guard let navController = destination as? UINavigationController else {
             return destination
         }
-        return navController.childViewControllers.first
+        return navController.children.first
     }
 }

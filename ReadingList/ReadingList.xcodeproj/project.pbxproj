@@ -13,19 +13,62 @@
 		AB5A527821397F950095F544 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5A527621397F950095F544 /* LaunchScreen.storyboard */; };
 		AB5A528021399A200095F544 /* ReadingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A527F21399A200095F544 /* ReadingListController.swift */; };
 		AB5A528221399E3C0095F544 /* ViewBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A528121399E3C0095F544 /* ViewBookController.swift */; };
-		AB5A528C2139C0970095F544 /* ReadingListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A52842139C0970095F544 /* ReadingListStore.swift */; };
-		AB5A528D2139C0970095F544 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A52852139C0970095F544 /* ModelObject.swift */; };
-		AB5A528E2139C0970095F544 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A52862139C0970095F544 /* Author.swift */; };
-		AB5A528F2139C0970095F544 /* ReadingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A52872139C0970095F544 /* ReadingList.swift */; };
-		AB5A52902139C0970095F544 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A52882139C0970095F544 /* Book.swift */; };
-		AB5A52912139C0970095F544 /* BooksAndAuthors.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB5A52892139C0970095F544 /* BooksAndAuthors.plist */; };
-		AB5A52922139C0970095F544 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB5A528B2139C0970095F544 /* Info.plist */; };
+		AB5A52912139C0970095F544 /* ReadingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB5A52892139C0970095F544 /* ReadingList.plist */; };
 		AB5AE7EE2139D73900DDC52C /* ReadingListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AE7ED2139D73900DDC52C /* ReadingListDataSource.swift */; };
 		AB5AE7F02139E5B000DDC52C /* EditBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AE7EF2139E5B000DDC52C /* EditBookController.swift */; };
 		AB5AE7F32139F9B200DDC52C /* ViewAndEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5AE7F12139F9B200DDC52C /* ViewAndEdit.storyboard */; };
 		AB5AE7F52139FA7000DDC52C /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5AE7F42139FA7000DDC52C /* Add.storyboard */; };
 		AB5AE7F72139FB2500DDC52C /* AddBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AE7F62139FB2500DDC52C /* AddBookController.swift */; };
+		B437A4882199F8F00069AD48 /* ReadingListModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B437A47F2199F8F00069AD48 /* ReadingListModel.framework */; };
+		B437A48F2199F8F00069AD48 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B437A48E2199F8F00069AD48 /* StoreTests.swift */; };
+		B437A4942199F8F00069AD48 /* ReadingListModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B437A47F2199F8F00069AD48 /* ReadingListModel.framework */; };
+		B437A4952199F8F00069AD48 /* ReadingListModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B437A47F2199F8F00069AD48 /* ReadingListModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B437A49C2199F9000069AD48 /* ReadingListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A52842139C0970095F544 /* ReadingListStore.swift */; };
+		B437A49D2199F9000069AD48 /* ReadingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A52872139C0970095F544 /* ReadingList.swift */; };
+		B437A49E2199F9000069AD48 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A52852139C0970095F544 /* ModelObject.swift */; };
+		B437A49F2199F9000069AD48 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A52862139C0970095F544 /* Author.swift */; };
+		B437A4A02199F9000069AD48 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A52882139C0970095F544 /* Book.swift */; };
+		B437A4A42199F9340069AD48 /* ReadingListModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B437A4A22199F9340069AD48 /* ReadingListModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B437A4A5219A00AC0069AD48 /* ReadingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB5A52892139C0970095F544 /* ReadingList.plist */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B437A4892199F8F00069AD48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB5A526221397F940095F544 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B437A47E2199F8F00069AD48;
+			remoteInfo = ReadingListModel;
+		};
+		B437A48B2199F8F00069AD48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB5A526221397F940095F544 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB5A526921397F940095F544;
+			remoteInfo = ReadingList;
+		};
+		B437A4922199F8F00069AD48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB5A526221397F940095F544 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B437A47E2199F8F00069AD48;
+			remoteInfo = ReadingListModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B437A4762199F8A70069AD48 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B437A4952199F8F00069AD48 /* ReadingListModel.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AB5A526A21397F940095F544 /* ReadingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,14 +84,19 @@
 		AB5A52862139C0970095F544 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		AB5A52872139C0970095F544 /* ReadingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingList.swift; sourceTree = "<group>"; };
 		AB5A52882139C0970095F544 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		AB5A52892139C0970095F544 /* BooksAndAuthors.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = BooksAndAuthors.plist; sourceTree = "<group>"; };
-		AB5A528A2139C0970095F544 /* ReadingListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingListModel.h; sourceTree = "<group>"; };
-		AB5A528B2139C0970095F544 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB5A52892139C0970095F544 /* ReadingList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = ReadingList.plist; sourceTree = "<group>"; };
 		AB5AE7ED2139D73900DDC52C /* ReadingListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListDataSource.swift; sourceTree = "<group>"; };
 		AB5AE7EF2139E5B000DDC52C /* EditBookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBookController.swift; sourceTree = "<group>"; };
 		AB5AE7F22139F9B200DDC52C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ReadingList/Base.lproj/ViewAndEdit.storyboard; sourceTree = "<group>"; };
 		AB5AE7F42139FA7000DDC52C /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
 		AB5AE7F62139FB2500DDC52C /* AddBookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookController.swift; sourceTree = "<group>"; };
+		B437A4562199F76A0069AD48 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B437A47F2199F8F00069AD48 /* ReadingListModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReadingListModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B437A4872199F8F00069AD48 /* ReadingListModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadingListModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B437A48E2199F8F00069AD48 /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		B437A4902199F8F00069AD48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B437A4A12199F9340069AD48 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B437A4A22199F9340069AD48 /* ReadingListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingListModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +104,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B437A4942199F8F00069AD48 /* ReadingListModel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B437A47C2199F8F00069AD48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B437A4842199F8F00069AD48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B437A4882199F8F00069AD48 /* ReadingListModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +129,10 @@
 		AB5A526121397F940095F544 = {
 			isa = PBXGroup;
 			children = (
-				AB5A52832139C0970095F544 /* ReadingListModel */,
+				B437A4562199F76A0069AD48 /* README.md */,
 				AB5A526C21397F940095F544 /* ReadingList */,
+				B437A4802199F8F00069AD48 /* ReadingListModel */,
+				B437A48D2199F8F00069AD48 /* ReadingListModelTests */,
 				AB5A526B21397F940095F544 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				AB5A526A21397F940095F544 /* ReadingList.app */,
+				B437A47F2199F8F00069AD48 /* ReadingListModel.framework */,
+				B437A4872199F8F00069AD48 /* ReadingListModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,22 +166,42 @@
 			path = ReadingList;
 			sourceTree = "<group>";
 		};
-		AB5A52832139C0970095F544 /* ReadingListModel */ = {
+		B437A4802199F8F00069AD48 /* ReadingListModel */ = {
 			isa = PBXGroup;
 			children = (
+				B437A4A12199F9340069AD48 /* Info.plist */,
+				AB5A52892139C0970095F544 /* ReadingList.plist */,
 				AB5A52842139C0970095F544 /* ReadingListStore.swift */,
 				AB5A52852139C0970095F544 /* ModelObject.swift */,
 				AB5A52862139C0970095F544 /* Author.swift */,
 				AB5A52872139C0970095F544 /* ReadingList.swift */,
 				AB5A52882139C0970095F544 /* Book.swift */,
-				AB5A52892139C0970095F544 /* BooksAndAuthors.plist */,
-				AB5A528A2139C0970095F544 /* ReadingListModel.h */,
-				AB5A528B2139C0970095F544 /* Info.plist */,
+				B437A4A22199F9340069AD48 /* ReadingListModel.h */,
 			);
 			path = ReadingListModel;
 			sourceTree = "<group>";
 		};
+		B437A48D2199F8F00069AD48 /* ReadingListModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				B437A48E2199F8F00069AD48 /* StoreTests.swift */,
+				B437A4902199F8F00069AD48 /* Info.plist */,
+			);
+			path = ReadingListModelTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B437A47A2199F8F00069AD48 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B437A4A42199F9340069AD48 /* ReadingListModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		AB5A526921397F940095F544 /* ReadingList */ = {
@@ -123,15 +211,54 @@
 				AB5A526621397F940095F544 /* Sources */,
 				AB5A526721397F940095F544 /* Frameworks */,
 				AB5A526821397F940095F544 /* Resources */,
+				B437A4762199F8A70069AD48 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B437A4932199F8F00069AD48 /* PBXTargetDependency */,
 			);
 			name = ReadingList;
 			productName = ReadingList;
 			productReference = AB5A526A21397F940095F544 /* ReadingList.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B437A47E2199F8F00069AD48 /* ReadingListModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B437A4962199F8F00069AD48 /* Build configuration list for PBXNativeTarget "ReadingListModel" */;
+			buildPhases = (
+				B437A47A2199F8F00069AD48 /* Headers */,
+				B437A47B2199F8F00069AD48 /* Sources */,
+				B437A47C2199F8F00069AD48 /* Frameworks */,
+				B437A47D2199F8F00069AD48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReadingListModel;
+			productName = ReadingListModel;
+			productReference = B437A47F2199F8F00069AD48 /* ReadingListModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B437A4862199F8F00069AD48 /* ReadingListModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B437A4992199F8F00069AD48 /* Build configuration list for PBXNativeTarget "ReadingListModelTests" */;
+			buildPhases = (
+				B437A4832199F8F00069AD48 /* Sources */,
+				B437A4842199F8F00069AD48 /* Frameworks */,
+				B437A4852199F8F00069AD48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B437A48A2199F8F00069AD48 /* PBXTargetDependency */,
+				B437A48C2199F8F00069AD48 /* PBXTargetDependency */,
+			);
+			name = ReadingListModelTests;
+			productName = ReadingListModelTests;
+			productReference = B437A4872199F8F00069AD48 /* ReadingListModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -139,12 +266,20 @@
 		AB5A526221397F940095F544 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "About Objects";
 				TargetAttributes = {
 					AB5A526921397F940095F544 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
+					};
+					B437A47E2199F8F00069AD48 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B437A4862199F8F00069AD48 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AB5A526921397F940095F544;
 					};
 				};
 			};
@@ -162,6 +297,8 @@
 			projectRoot = "";
 			targets = (
 				AB5A526921397F940095F544 /* ReadingList */,
+				B437A47E2199F8F00069AD48 /* ReadingListModel */,
+				B437A4862199F8F00069AD48 /* ReadingListModelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -175,9 +312,23 @@
 				AB5AE7F32139F9B200DDC52C /* ViewAndEdit.storyboard in Resources */,
 				AB5AE7F52139FA7000DDC52C /* Add.storyboard in Resources */,
 				AB5A527521397F950095F544 /* Assets.xcassets in Resources */,
-				AB5A52912139C0970095F544 /* BooksAndAuthors.plist in Resources */,
-				AB5A52922139C0970095F544 /* Info.plist in Resources */,
+				AB5A52912139C0970095F544 /* ReadingList.plist in Resources */,
 				AB5A527321397F940095F544 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B437A47D2199F8F00069AD48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B437A4A5219A00AC0069AD48 /* ReadingList.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B437A4852199F8F00069AD48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,19 +341,52 @@
 			files = (
 				AB5AE7F02139E5B000DDC52C /* EditBookController.swift in Sources */,
 				AB5AE7EE2139D73900DDC52C /* ReadingListDataSource.swift in Sources */,
-				AB5A52902139C0970095F544 /* Book.swift in Sources */,
-				AB5A528E2139C0970095F544 /* Author.swift in Sources */,
-				AB5A528C2139C0970095F544 /* ReadingListStore.swift in Sources */,
 				AB5A528221399E3C0095F544 /* ViewBookController.swift in Sources */,
 				AB5A528021399A200095F544 /* ReadingListController.swift in Sources */,
-				AB5A528D2139C0970095F544 /* ModelObject.swift in Sources */,
 				AB5AE7F72139FB2500DDC52C /* AddBookController.swift in Sources */,
-				AB5A528F2139C0970095F544 /* ReadingList.swift in Sources */,
 				AB5A526E21397F940095F544 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B437A47B2199F8F00069AD48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B437A49D2199F9000069AD48 /* ReadingList.swift in Sources */,
+				B437A49E2199F9000069AD48 /* ModelObject.swift in Sources */,
+				B437A49F2199F9000069AD48 /* Author.swift in Sources */,
+				B437A4A02199F9000069AD48 /* Book.swift in Sources */,
+				B437A49C2199F9000069AD48 /* ReadingListStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B437A4832199F8F00069AD48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B437A48F2199F8F00069AD48 /* StoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B437A48A2199F8F00069AD48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B437A47E2199F8F00069AD48 /* ReadingListModel */;
+			targetProxy = B437A4892199F8F00069AD48 /* PBXContainerItemProxy */;
+		};
+		B437A48C2199F8F00069AD48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB5A526921397F940095F544 /* ReadingList */;
+			targetProxy = B437A48B2199F8F00069AD48 /* PBXContainerItemProxy */;
+		};
+		B437A4932199F8F00069AD48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B437A47E2199F8F00069AD48 /* ReadingListModel */;
+			targetProxy = B437A4922199F8F00069AD48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AB5A527121397F940095F544 /* Main.storyboard */ = {
@@ -349,6 +533,7 @@
 		AB5A527D21397F950095F544 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7J7LD9SB6Q;
@@ -359,7 +544,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.ReadingList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -367,6 +552,7 @@
 		AB5A527E21397F950095F544 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7J7LD9SB6Q;
@@ -377,8 +563,114 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.ReadingList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B437A4972199F8F00069AD48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7J7LD9SB6Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ReadingListModel/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.ReadingListModel;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B437A4982199F8F00069AD48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7J7LD9SB6Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ReadingListModel/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.ReadingListModel;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B437A49A2199F8F00069AD48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7J7LD9SB6Q;
+				INFOPLIST_FILE = ReadingListModelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.ReadingListModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadingList.app/ReadingList";
+			};
+			name = Debug;
+		};
+		B437A49B2199F8F00069AD48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7J7LD9SB6Q;
+				INFOPLIST_FILE = ReadingListModelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aboutobjects.ReadingListModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadingList.app/ReadingList";
 			};
 			name = Release;
 		};
@@ -399,6 +691,24 @@
 			buildConfigurations = (
 				AB5A527D21397F950095F544 /* Debug */,
 				AB5A527E21397F950095F544 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B437A4962199F8F00069AD48 /* Build configuration list for PBXNativeTarget "ReadingListModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B437A4972199F8F00069AD48 /* Debug */,
+				B437A4982199F8F00069AD48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B437A4992199F8F00069AD48 /* Build configuration list for PBXNativeTarget "ReadingListModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B437A49A2199F8F00069AD48 /* Debug */,
+				B437A49B2199F8F00069AD48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,8 +1,9 @@
 import UIKit
+import ReadingListModel
 
 class ReadingListDataSource: NSObject
 {
-    let store = ReadingListStore("BooksAndAuthors")
+    @IBOutlet var store: ReadingListStore!
     lazy var readingList = store.fetchedReadingList
     
     func book(at indexPath: IndexPath) -> Book {
@@ -28,7 +29,7 @@ extension ReadingListDataSource: UITableViewDataSource
         save()
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         readingList.books.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
         save()
