@@ -35,7 +35,7 @@ class ReadingListController: UITableViewController
 // TODO: Move to Extensions.swift
 extension IndexPath
 {
-    static var zero: IndexPath { return IndexPath(row: 0, section: 0) }
+    static let zero = IndexPath(row: 0, section: 0)
 }
 
 // MARK: - Unwind segues
@@ -45,32 +45,6 @@ extension ReadingListController
         tableView.reloadData()
         dataSource.save()
     }
-    @IBAction func doneAdding(segue: UIStoryboardSegue) {
-        // TODO: save, etc.
-    }
+    @IBAction func doneAdding(segue: UIStoryboardSegue) { }
     @IBAction func cancel(segue: UIStoryboardSegue) { }
-}
-
-
-
-
-
-
-
-extension ReadingListController
-{
-    func example_tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        var cell: UITableViewCell
-        
-        if let cachedCell = tableView.dequeueReusableCell(withIdentifier: "Foo Bar") {
-            cell = cachedCell
-        } else {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Foo Bar")
-        }
-        
-        cell.textLabel?.text = "Row \(indexPath.row + 1)"
-        
-        return cell
-    }
 }
