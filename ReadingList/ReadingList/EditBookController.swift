@@ -8,10 +8,10 @@ class EditBookController: UITableViewController
 {
     var book: Book?
     
-    @IBOutlet weak var titleField: UITextField!
-    @IBOutlet weak var yearField: UITextField!
-    @IBOutlet weak var firstNameField: UITextField!
-    @IBOutlet weak var lastNameField: UITextField!
+    @IBOutlet private weak var titleField: UITextField!
+    @IBOutlet private weak var yearField: UITextField!
+    @IBOutlet private weak var firstNameField: UITextField!
+    @IBOutlet private weak var lastNameField: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,7 +25,7 @@ class EditBookController: UITableViewController
         lastNameField.text = book?.author?.lastName
     }
     
-    func updateModel() {
+    private func updateModel() {
         book?.title = titleField.text
         book?.year = yearField.text
         book?.author?.firstName = firstNameField.text

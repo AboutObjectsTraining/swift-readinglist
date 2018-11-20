@@ -8,17 +8,17 @@ class AddBookController: UITableViewController
 {
     var done: ((Book) -> Void)?
     
-    @IBOutlet weak var titleField: UITextField!
-    @IBOutlet weak var yearField: UITextField!
-    @IBOutlet weak var firstNameField: UITextField!
-    @IBOutlet weak var lastNameField: UITextField!
+    @IBOutlet private weak var titleField: UITextField!
+    @IBOutlet private weak var yearField: UITextField!
+    @IBOutlet private weak var firstNameField: UITextField!
+    @IBOutlet private weak var lastNameField: UITextField!
     
     // MARK: - Obtaining a dictionary of UI values
-    var author: Author {
+    private var author: Author {
         return Author(dictionary: [Author.Keys.firstName: firstNameField.text ?? String.blank,
                                    Author.Keys.lastName: lastNameField.text ?? String.blank])
     }
-    var book: Book {
+    private var book: Book {
         return Book(dictionary: [Book.Keys.title: titleField.text ?? String.blank,
                                  Book.Keys.year: yearField.text ?? String.blank,
                                  Book.Keys.author: author])
@@ -34,12 +34,12 @@ class AddBookController: UITableViewController
 extension AddBookController
 {
     // MARK: - Alternate approach
-    var flattenedAuthor: Author {
+    private var flattenedAuthor: Author {
         let authorDict: [String: Any?] = [Author.Keys.firstName: firstNameField.text,
                                           Author.Keys.lastName: lastNameField.text]
         return Author(dictionary: authorDict.flattened)
     }
-    var flattenedBook: Book {
+    private var flattenedBook: Book {
         let bookDict: [String: Any?] = [Book.Keys.title: titleField.text,
                                         Book.Keys.year: yearField.text,
                                         Book.Keys.author: author]
