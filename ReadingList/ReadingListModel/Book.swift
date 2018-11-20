@@ -25,7 +25,7 @@ open class Book: ModelObject
         return Keys.all
     }
     
-    public required init(dictionary: [String : Any]) {
+    public required init(dictionary: JsonDictionary) {
         var bookInfo = dictionary
         if let authorInfo = dictionary[Keys.author] as? JsonDictionary {
             bookInfo[Keys.author] = Author(dictionary: authorInfo)

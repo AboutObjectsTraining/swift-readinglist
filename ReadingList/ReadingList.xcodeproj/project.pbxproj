@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AB5A526E21397F940095F544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A526D21397F940095F544 /* AppDelegate.swift */; };
 		AB5A527321397F940095F544 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5A527121397F940095F544 /* Main.storyboard */; };
-		AB5A527521397F950095F544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5A527421397F950095F544 /* Assets.xcassets */; };
 		AB5A527821397F950095F544 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5A527621397F950095F544 /* LaunchScreen.storyboard */; };
 		AB5A528021399A200095F544 /* ReadingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A527F21399A200095F544 /* ReadingListController.swift */; };
 		AB5A528221399E3C0095F544 /* ViewBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A528121399E3C0095F544 /* ViewBookController.swift */; };
@@ -30,6 +29,9 @@
 		B437A4A02199F9000069AD48 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A52882139C0970095F544 /* Book.swift */; };
 		B437A4A42199F9340069AD48 /* ReadingListModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B437A4A22199F9340069AD48 /* ReadingListModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B437A4A5219A00AC0069AD48 /* ReadingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB5A52892139C0970095F544 /* ReadingList.plist */; };
+		B4E2FD4921A32BFD001BDB7E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E2FD4821A32BFD001BDB7E /* Extensions.swift */; };
+		B4E2FD4C21A370A7001BDB7E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E2FD4A21A370A7001BDB7E /* Colors.xcassets */; };
+		B4E2FD4D21A370A7001BDB7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E2FD4B21A370A7001BDB7E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +76,6 @@
 		AB5A526A21397F940095F544 /* ReadingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5A526D21397F940095F544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB5A527221397F940095F544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AB5A527421397F950095F544 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB5A527721397F950095F544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB5A527921397F950095F544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5A527F21399A200095F544 /* ReadingListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListController.swift; sourceTree = "<group>"; };
@@ -97,6 +98,9 @@
 		B437A4902199F8F00069AD48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B437A4A12199F9340069AD48 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B437A4A22199F9340069AD48 /* ReadingListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingListModel.h; sourceTree = "<group>"; };
+		B4E2FD4821A32BFD001BDB7E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B4E2FD4A21A370A7001BDB7E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		B4E2FD4B21A370A7001BDB7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,11 +160,13 @@
 				AB5A528121399E3C0095F544 /* ViewBookController.swift */,
 				AB5AE7EF2139E5B000DDC52C /* EditBookController.swift */,
 				AB5AE7F62139FB2500DDC52C /* AddBookController.swift */,
-				AB5A527421397F950095F544 /* Assets.xcassets */,
+				B4E2FD4821A32BFD001BDB7E /* Extensions.swift */,
 				AB5A527121397F940095F544 /* Main.storyboard */,
 				AB5AE7F42139FA7000DDC52C /* Add.storyboard */,
 				AB5AE7F12139F9B200DDC52C /* ViewAndEdit.storyboard */,
 				AB5A527621397F950095F544 /* LaunchScreen.storyboard */,
+				B4E2FD4B21A370A7001BDB7E /* Assets.xcassets */,
+				B4E2FD4A21A370A7001BDB7E /* Colors.xcassets */,
 				AB5A527921397F950095F544 /* Info.plist */,
 			);
 			path = ReadingList;
@@ -311,7 +317,8 @@
 				AB5A527821397F950095F544 /* LaunchScreen.storyboard in Resources */,
 				AB5AE7F32139F9B200DDC52C /* ViewAndEdit.storyboard in Resources */,
 				AB5AE7F52139FA7000DDC52C /* Add.storyboard in Resources */,
-				AB5A527521397F950095F544 /* Assets.xcassets in Resources */,
+				B4E2FD4C21A370A7001BDB7E /* Colors.xcassets in Resources */,
+				B4E2FD4D21A370A7001BDB7E /* Assets.xcassets in Resources */,
 				AB5A52912139C0970095F544 /* ReadingList.plist in Resources */,
 				AB5A527321397F940095F544 /* Main.storyboard in Resources */,
 			);
@@ -345,6 +352,7 @@
 				AB5A528021399A200095F544 /* ReadingListController.swift in Sources */,
 				AB5AE7F72139FB2500DDC52C /* AddBookController.swift in Sources */,
 				AB5A526E21397F940095F544 /* AppDelegate.swift in Sources */,
+				B4E2FD4921A32BFD001BDB7E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

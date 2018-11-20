@@ -1,3 +1,6 @@
+// Copyright (C) 2018 About Objects, Inc. All Rights Reserved.
+// See LICENSE.txt for this example's licensing information.
+//
 import UIKit
 import ReadingListModel
 
@@ -12,13 +15,17 @@ class EditBookController: UITableViewController
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        refreshData()
+    }
+    
+    private func refreshData() {
         titleField.text = book?.title
         yearField.text = book?.year
         firstNameField.text = book?.author?.firstName
         lastNameField.text = book?.author?.lastName
     }
     
-    func updateBook() {
+    func updateModel() {
         book?.title = titleField.text
         book?.year = yearField.text
         book?.author?.firstName = firstNameField.text
@@ -26,8 +33,8 @@ class EditBookController: UITableViewController
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Done" {
-            updateBook()
+        if segue.identifier == UIStoryboardSegue.Identifiers.done {
+            updateModel()
         }
     }
 }
