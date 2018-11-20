@@ -6,8 +6,8 @@ import ReadingListModel
 
 class ReadingListDataSource: NSObject
 {
-    @IBOutlet var store: ReadingListStore!
-    lazy var readingList = store.fetchedReadingList
+    @IBOutlet private var store: ReadingListStore!
+    lazy private(set) var readingList = store.fetchedReadingList
     
     func book(at indexPath: IndexPath) -> Book {
         return readingList.books[indexPath.row]
@@ -27,7 +27,6 @@ class ReadingListDataSource: NSObject
 }
 
 private let unknown = "Unknown"
-//private let cellIdentifier = "Book Summary"
 
 private struct CellIdentifier {
     static let even = "Even"
@@ -62,10 +61,20 @@ extension ReadingListDataSource: UITableViewDataSource
         populate(cell: cell, at: indexPath)
         return cell
     }
-    
+}
+
+extension ReadingListDataSource: CellPopulation
+{
     func populate(cell: UITableViewCell, at indexPath: IndexPath) {
         let book = self.book(at: indexPath)
         cell.textLabel?.text = book.title
         cell.detailTextLabel?.text = "\(book.year ?? unknown)  \(book.author?.fullName ?? unknown)"
     }
+}
+
+@objc protocol CellPopulation
+{
+    func populate(cell: UITableViewCell, at indexPath: IndexPath)
+    
+    @objc optional func configure(cell: UITableViewCell, at indexPath: IndexPath)
 }
