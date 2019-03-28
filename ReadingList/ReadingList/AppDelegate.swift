@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     }
     
     func configureAppearance() {
-        UITableView.appearance().backgroundColor = .alternateCell
         UITextField.appearance().backgroundColor = .cell
         
         let navBarProxy = UINavigationBar.appearance()
