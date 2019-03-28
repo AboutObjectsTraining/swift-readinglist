@@ -9,7 +9,6 @@ let titleAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
-    
     var window: UIWindow?
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
@@ -21,9 +20,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         UINavigationBar.appearance().titleTextAttributes = titleAttributes
         UINavigationBar.appearance().largeTitleTextAttributes = titleAttributes
         
-        UITableView.appearance().backgroundColor = UIColor.alternateCell
-        UITableViewCell.appearance().backgroundColor = UIColor.cell
-        UITextField.appearance().backgroundColor = UIColor.cell
+        UITableView.appearance().backgroundColor = .alternateCell
+        // UITableViewCell.appearance().backgroundColor = .cell
+        UITextField.appearance().backgroundColor = .cell
+        
+        // Changing appearance based on types
+        
+        UITableView.appearance(whenContainedInInstancesOf: [AddBookController.self]).backgroundColor = .cool
+        UITextField.appearance(whenContainedInInstancesOf: [AddBookController.self]).backgroundColor = .white
+        UITextField.appearance(whenContainedInInstancesOf: [AddBookController.self]).tintColor = .cool
+
+        // Changing appearance based on size classes
+        
+        UITableView.appearance(for: UITraitCollection(verticalSizeClass: .compact)).backgroundColor = .alternateBackground
+        UITableView.appearance(for: UITraitCollection(verticalSizeClass: .regular)).backgroundColor = .alternateCell
     }
 }
 
+// MARK: UIResponder methods
+extension AppDelegate
+{
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("In \(#function)")
+        UIApplication.shared.sendAction(#selector(resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
