@@ -9,12 +9,16 @@ extension UIColor {
         static let tint = "Tint Color"
         static let title = "Title Color"
         static let cell = "Cell Color"
+        static let add = "Add Color"
         static let alternateCell = "Alternate Cell Color"
+        static let alternateBackground = "Alternate Background Color"
     }
     static let tint = UIColor(named: Names.tint) ?? UIColor.black
     static let title = UIColor(named: Names.title) ?? UIColor.black
     static let cell = UIColor(named: Names.cell) ?? UIColor.white
+    static let add = UIColor(named: Names.add) ?? UIColor.lightGray
     static let alternateCell = UIColor(named: Names.alternateCell) ?? UIColor.white
+    static let alternateBackground = UIColor(named: Names.alternateBackground) ?? UIColor.brown
 }
 
 extension UIStoryboardSegue
