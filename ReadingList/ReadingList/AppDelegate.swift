@@ -12,28 +12,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     var window: UIWindow?
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
+        window?.tintColor = .tint
         configureAppearance()
     }
     
     func configureAppearance() {
-        window?.tintColor = UIColor.tint
-        UINavigationBar.appearance().titleTextAttributes = titleAttributes
-        UINavigationBar.appearance().largeTitleTextAttributes = titleAttributes
-        
         UITableView.appearance().backgroundColor = .alternateCell
-        // UITableViewCell.appearance().backgroundColor = .cell
         UITextField.appearance().backgroundColor = .cell
+        
+        let navBarProxy = UINavigationBar.appearance()
+        navBarProxy.titleTextAttributes = titleAttributes
+        navBarProxy.largeTitleTextAttributes = titleAttributes
         
         // Changing appearance based on types
         
-        UITableView.appearance(whenContainedInInstancesOf: [AddBookController.self]).backgroundColor = .cool
-        UITextField.appearance(whenContainedInInstancesOf: [AddBookController.self]).backgroundColor = .white
-        UITextField.appearance(whenContainedInInstancesOf: [AddBookController.self]).tintColor = .cool
+        let addBookTextFieldProxy = UITextField.appearance(whenContainedInInstancesOf: [AddBookController.self])
+        addBookTextFieldProxy.backgroundColor = .add
+        addBookTextFieldProxy.tintColor = .purple
 
         // Changing appearance based on size classes
         
-        UITableView.appearance(for: UITraitCollection(verticalSizeClass: .compact)).backgroundColor = .alternateBackground
-        UITableView.appearance(for: UITraitCollection(verticalSizeClass: .regular)).backgroundColor = .alternateCell
+        let compactHeightTableViewProxy = UITableView.appearance(for: UITraitCollection(verticalSizeClass: .compact))
+        let regularHeightViewAndEditTableViewProxy =  UITableView.appearance(for: UITraitCollection(verticalSizeClass: .regular))
+        
+        compactHeightTableViewProxy.backgroundColor = .alternateBackground
+        regularHeightViewAndEditTableViewProxy.backgroundColor = .alternateCell
     }
 }
 
