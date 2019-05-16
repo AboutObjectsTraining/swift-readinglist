@@ -13,7 +13,7 @@ open class ReadingList: ModelObject
     }
     
     @objc open var title = ""
-    @objc open var books = [Book]()
+    @objc open private(set) var books = [Book]()
     
     open override var description: String {
         var s = "Title: \(title)\nCount: \(books.count)\nBooks:\n------\n"
@@ -42,4 +42,11 @@ open class ReadingList: ModelObject
         }
         return dict
     }
+}
+
+extension ReadingList
+{
+    open func book(at indexPath: IndexPath) -> Book { return books[indexPath.row] }
+    open func insert(book: Book, at indexPath: IndexPath) { books.insert(book, at: indexPath.row) }
+    open func removeBook(at indexPath: IndexPath) { books.remove(at: indexPath.row) }
 }

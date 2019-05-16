@@ -10,15 +10,15 @@ class ReadingListDataSource: NSObject
     lazy private(set) var readingList = store.fetchedReadingList
     
     func book(at indexPath: IndexPath) -> Book {
-        return readingList.books[indexPath.row]
+        return readingList.book(at: indexPath)
     }
     
     func insert(book: Book, at indexPath: IndexPath) {
-        readingList.books.insert(book, at: indexPath.row)
+        readingList.insert(book: book, at: indexPath)
     }
     
     func remove(at indexPath: IndexPath) {
-        readingList.books.remove(at: indexPath.row)
+        readingList.removeBook(at: indexPath)
     }
     
     func save() {
