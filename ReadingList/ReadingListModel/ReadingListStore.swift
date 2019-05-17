@@ -2,7 +2,7 @@
 // Copyright (C) 2017 About Objects, Inc. All Rights Reserved.
 // See LICENSE.txt for this example's licensing information.
 //
-import UIKit
+import Foundation
 
 let defaultStoreName = "ReadingList"
 
