@@ -26,16 +26,14 @@ class ReadingListDataSource: NSObject
     }
 }
 
-private let unknown = "Unknown"
-
-private struct CellIdentifier {
-    static let even = "Even"
-    static let odd = "Odd"
-}
-
 // MARK: - UITableViewDataSource methods
 extension ReadingListDataSource: UITableViewDataSource
 {
+    private struct CellIdentifier {
+        static let even = "Even"
+        static let odd = "Odd"
+    }
+    
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         readingList.moveBook(at: sourceIndexPath, to: destinationIndexPath)
         save()
@@ -56,23 +54,21 @@ extension ReadingListDataSource: UITableViewDataSource
         guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier) else {
             fatalError("Set the cell's identifier in the storyboard")
         }
+        configure(cell: cell, at: indexPath)
         populate(cell: cell, at: indexPath)
         return cell
     }
 }
 
-extension ReadingListDataSource: CellPopulation
+private let unknown = "Unknown"
+
+extension ReadingListDataSource
 {
+    func configure(cell: UITableViewCell, at indexPath: IndexPath) { }
+    
     func populate(cell: UITableViewCell, at indexPath: IndexPath) {
         let book = self.book(at: indexPath)
         cell.textLabel?.text = book.title
         cell.detailTextLabel?.text = "\(book.year ?? unknown)  \(book.author?.fullName ?? unknown)"
     }
-}
-
-@objc protocol CellPopulation
-{
-    func populate(cell: UITableViewCell, at indexPath: IndexPath)
-    
-    @objc optional func configure(cell: UITableViewCell, at indexPath: IndexPath)
 }
