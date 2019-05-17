@@ -44,9 +44,15 @@ open class ReadingList: ModelObject
     }
 }
 
+// MARK: - Books array accessors
 extension ReadingList
 {
     open func book(at indexPath: IndexPath) -> Book { return books[indexPath.row] }
     open func insert(book: Book, at indexPath: IndexPath) { books.insert(book, at: indexPath.row) }
     open func removeBook(at indexPath: IndexPath) { books.remove(at: indexPath.row) }
+    open func moveBook(at sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let book = self.book(at: sourceIndexPath)
+        removeBook(at: sourceIndexPath)
+        insert(book: book, at: destinationIndexPath)
+    }
 }

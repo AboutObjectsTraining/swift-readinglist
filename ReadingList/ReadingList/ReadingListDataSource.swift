@@ -37,9 +37,7 @@ private struct CellIdentifier {
 extension ReadingListDataSource: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let strongBook = book(at: sourceIndexPath)
-        remove(at: sourceIndexPath)
-        insert(book: strongBook, at: destinationIndexPath)
+        readingList.moveBook(at: sourceIndexPath, to: destinationIndexPath)
         save()
     }
     
