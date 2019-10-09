@@ -13,6 +13,7 @@ class ViewBookController: UITableViewController
     @IBOutlet private weak var yearLabel: UILabel!
     @IBOutlet private weak var firstNameLabel: UILabel!
     @IBOutlet private weak var lastNameLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBAction private func cancel(segue: UIStoryboardSegue) { }
     
@@ -26,6 +27,7 @@ class ViewBookController: UITableViewController
         yearLabel.text = book?.year
         firstNameLabel.text = book?.author?.firstName
         lastNameLabel.text = book?.author?.lastName
+        imageView.image = UIImage(named: book?.author?.lastName ?? "Unknown")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

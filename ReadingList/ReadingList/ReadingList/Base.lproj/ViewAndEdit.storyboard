@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oms-3I-ABh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oms-3I-ABh">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,6 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="bUI-yb-Fsz">
+                            <rect key="frame" x="0.0" y="305.33333333333337" width="375" height="170"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shakespeare" translatesAutoresizingMaskIntoConstraints="NO" id="Cqk-0h-CLN">
+                                    <rect key="frame" x="123.66666666666669" y="0.0" width="128" height="128"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="128" id="2cH-z8-MV8"/>
+                                        <constraint firstAttribute="width" secondItem="Cqk-0h-CLN" secondAttribute="height" multiplier="1:1" id="QnI-dC-r0o"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Cqk-0h-CLN" firstAttribute="centerX" secondItem="bUI-yb-Fsz" secondAttribute="centerX" id="q8k-rp-Ra9"/>
+                                <constraint firstItem="Cqk-0h-CLN" firstAttribute="top" secondItem="bUI-yb-Fsz" secondAttribute="top" id="rV3-qe-GVi"/>
+                            </constraints>
+                        </view>
                         <sections>
                             <tableViewSection headerTitle="Book" id="ern-Yt-3Po">
                                 <cells>
@@ -138,6 +160,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="firstNameLabel" destination="lk1-tf-JuD" id="lAb-qi-p9x"/>
+                        <outlet property="imageView" destination="Cqk-0h-CLN" id="toQ-FR-RmE"/>
                         <outlet property="lastNameLabel" destination="NXH-mj-tiA" id="vmq-OJ-0FS"/>
                         <outlet property="titleLabel" destination="tr1-ND-gfu" id="qaT-lb-2tA"/>
                         <outlet property="yearLabel" destination="6gv-nx-dw7" id="dpc-La-mNn"/>
@@ -145,7 +168,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hct-ac-EPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46" y="-4"/>
+            <point key="canvasLocation" x="-47.200000000000003" y="-4.4334975369458132"/>
         </scene>
         <!--Edit Book-->
         <scene sceneID="QYp-JR-4TD">
@@ -361,4 +384,7 @@
             <point key="canvasLocation" x="757.60000000000002" y="-3.6945812807881775"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Shakespeare" width="155" height="153"/>
+    </resources>
 </document>

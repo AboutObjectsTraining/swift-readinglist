@@ -37,6 +37,15 @@ extension UIStoryboardSegue
     }
 }
 
+@IBDesignable
+extension UIImageView
+{
+    @IBInspectable var cornerRadius: CGFloat {
+        get { return layer.cornerRadius }
+        set { layer.cornerRadius = newValue }
+    }
+}
+
 extension Dictionary where Key == String, Value == Any?
 {
     var flattened: JsonDictionary {
