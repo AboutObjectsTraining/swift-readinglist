@@ -35,10 +35,10 @@ open class ReadingList: ModelObject
         super.setValue(books ?? value, forKey: key)
     }
     
-    open override func dictionaryRepresentation() -> JsonDictionary {
-        var dict = super.dictionaryRepresentation()
+    open override var dictionaryRepresentation: JsonDictionary {
+        var dict = super.dictionaryRepresentation
         if let books = dict[Keys.books] as? [ModelObject] {
-            dict[Keys.books] = books.map { $0.dictionaryRepresentation() }
+            dict[Keys.books] = books.map { $0.dictionaryRepresentation }
         }
         return dict
     }

@@ -10,12 +10,12 @@ open class ModelObject: NSObject
 {
     open class var keys: [String] { return [] }
     
+    open var dictionaryRepresentation: JsonDictionary {
+        return dictionaryWithValues(forKeys: type(of: self).keys) as JsonDictionary
+    }
+    
     public required init(dictionary: JsonDictionary) {
         super.init()
         setValuesForKeys(dictionary)
-    }
-    
-    open func dictionaryRepresentation() -> JsonDictionary {
-        return dictionaryWithValues(forKeys: type(of: self).keys) as JsonDictionary
     }
 }

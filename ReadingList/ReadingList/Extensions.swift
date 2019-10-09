@@ -43,8 +43,8 @@ extension Dictionary where Key == String, Value == Any?
         return mapValues { value -> Any in
             switch value {
             case let (dict?) as [String: Any?]?: return dict.flattened
-            case let (string?) as String?: return string
-            default: return value ?? ""
+            case let (string?) as String?:       return string
+            default:                             return value ?? ""
             }
         }
     }

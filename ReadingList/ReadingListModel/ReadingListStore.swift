@@ -6,7 +6,7 @@ import Foundation
 
 let defaultStoreName = "ReadingList"
 
-/// Encapsulates the storage for serialized instances of `ReadingList`, and 
+/// Encapsulates the storage for serialized instances of `ReadingList`, and
 /// their nested `Book` and `Author` objects. Instances of these types are
 /// serialized by obtaining dictionaries of their keys and values, and writing
 /// the resulting dictionaries to the file system in plist format.
@@ -42,7 +42,7 @@ open class ReadingListStore : NSObject
     /// Saves the provided reading list to a file in the Documents directory.
     /// - Parameter readingList: The instance of `ReadingList` to save
     open func save(readingList: ReadingList) {
-        let dict = readingList.dictionaryRepresentation() as NSDictionary
+        let dict = readingList.dictionaryRepresentation as NSDictionary
         dict.write(to: documentUrl, atomically: true)
     }
     

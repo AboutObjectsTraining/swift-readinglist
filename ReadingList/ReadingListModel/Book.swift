@@ -33,10 +33,10 @@ open class Book: ModelObject
         super.init(dictionary: bookInfo)
     }
     
-    open override func dictionaryRepresentation() -> JsonDictionary {
-        var dict = super.dictionaryRepresentation()
+    open override var dictionaryRepresentation: JsonDictionary {
+        var dict = super.dictionaryRepresentation
         if let author = dict[Keys.author] as? Author {
-            dict[Keys.author] = author.dictionaryRepresentation() as Any?
+            dict[Keys.author] = author.dictionaryRepresentation as Any?
         }
         return dict
     }
