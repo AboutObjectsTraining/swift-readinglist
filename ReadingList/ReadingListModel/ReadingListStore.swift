@@ -16,24 +16,27 @@ open class ReadingListStore : NSObject
     public let storeType = "plist"
     /// Name of the store file; can be configured in Interface Builder
     @IBInspectable public var storeName: String = defaultStoreName
+    
     /// A `ReadingList` instance initialized with the contents of the store file
     open lazy var fetchedReadingList: ReadingList = fetch()
+    
+    /// URL of the store file in either the Documents directory, if it exists there, or in the app bundle
+    lazy var url: URL? = self.documentExists ? self.documentUrl : self.bundleUrl
+    
     /// URL of the store file in the Documents directory.
     public let documentUrl: URL
+    /// `true` if a file exists at the path defined by `documentUrl`
+    lazy var documentExists: Bool = FileManager.default.fileExists(atPath: self.documentUrl.path)
+    
     /// Bundle that contains the store file
     lazy var bundle: Bundle = Bundle.init(for: ReadingListStore.self)
     /// URL of the store file in the app bundle
     lazy var bundleUrl: URL? = bundle.url(forResource: self.storeName, withExtension: self.storeType)
-    /// `true` if a file exists at the path defined by `documentUrl`
-    lazy var documentExists: Bool = FileManager.default.fileExists(atPath: self.documentUrl.path)
-    /// URL of the store file in either the Documents directory if it exists there, or the app bundle
-    lazy var url: URL? = self.documentExists ? self.documentUrl : self.bundleUrl
     
     lazy var unableToLoadMessage: String = "Unable to load \(self.storeName) with \(self.storeType) at URL \(String(describing: self.url))"
     lazy var missingDocumentMessage: String = "Unable to locate \(self.storeName) in \(self.documentExists ? self.documentUrl.description : bundle.description)"
     
     /// Initializes a store with the provided name.
-    /// - Parameter storeName: Name of the store file
     public override init() {
         documentUrl = FileManager.fileURLForDocument(name: storeName, type: storeType)
         super.init()
@@ -56,7 +59,6 @@ open class ReadingListStore : NSObject
         return ReadingList(dictionary: dict) // Initializes graph of model objects
     }
 }
-
 
 extension FileManager
 {

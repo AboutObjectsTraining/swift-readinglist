@@ -46,25 +46,10 @@ extension UIImageView
     }
 }
 
-extension Dictionary where Key == String, Value == Any?
-{
-    var flattened: JsonDictionary {
-        return mapValues { value -> Any in
-            switch value {
-            case let (dict?) as [String: Any?]?: return dict.flattened
-            case let (string?) as String?:       return string
-            default:                             return value ?? ""
-            }
-        }
-    }
-}
-
-extension IndexPath
-{
+extension IndexPath {
     static let zero = IndexPath(row: 0, section: 0)
 }
 
-extension String
-{
+extension String {
     static var blank: String { return "" }
 }

@@ -26,23 +26,23 @@ class AddBookController: UITableViewController
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == UIStoryboardSegue.Identifiers.done {
-            done?(flattenedBook)
+            done?(book)
         }
     }
 }
 
+// MARK: - Alternate approach
 extension AddBookController
 {
-    // MARK: - Alternate approach
     private var flattenedAuthor: Author {
         let authorDict: [String: Any?] = [Author.Keys.firstName: firstNameField.text,
                                           Author.Keys.lastName: lastNameField.text]
-        return Author(dictionary: authorDict.flattened)
+        return Author(dictionary: authorDict.compactMapValues { $0 })
     }
     private var flattenedBook: Book {
         let bookDict: [String: Any?] = [Book.Keys.title: titleField.text,
                                         Book.Keys.year: yearField.text,
                                         Book.Keys.author: author]
-        return Book(dictionary: bookDict.flattened)
+        return Book(dictionary: bookDict.compactMapValues { $0 })
     }
 }

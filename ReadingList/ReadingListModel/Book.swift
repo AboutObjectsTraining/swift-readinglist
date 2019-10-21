@@ -34,11 +34,11 @@ open class Book: ModelObject
     }
     
     open override var dictionaryRepresentation: JsonDictionary {
-        var dict = super.dictionaryRepresentation
-        if let author = dict[Keys.author] as? Author {
-            dict[Keys.author] = author.dictionaryRepresentation as Any?
+        let dict = super.dictionaryRepresentation
+        return dict.mapValues { (value: Any) -> Any in
+            guard let author = value as? Author else { return value }
+            return author.dictionaryRepresentation
         }
-        return dict
     }
 }
 
